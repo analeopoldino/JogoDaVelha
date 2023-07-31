@@ -2,7 +2,7 @@
 
 Este é um simples jogo da velha desenvolvido em HTML, CSS e JavaScript. O jogo pode ser jogado por dois jogadores ou contra o computador.
 
-![Jogo da Velha](imagem_do_jogo.png)
+![Jogo da Velha](/iamgens/tic-tac-toe.gif)
 
 ## Como Jogar
 
@@ -21,9 +21,14 @@ O jogo permite que o computador faça movimentos aleatórios quando o modo "Joga
 ## Responsividade
 
 O design do jogo é responsivo e se adapta a diferentes tamanhos de tela, incluindo tablets e dispositivos móveis. As células do tabuleiro são ajustadas para se encaixar em diferentes resoluções.
+## Contribuições
 
-## Créditos
+Contribuições são bem-vindas! Se você encontrar algum problema ou tiver alguma melhoria para sugerir, por favor, abra uma issue ou envie um pull request.
 
-O jogo foi desenvolvido por [AnaLeopoldino] e faz parte de um projeto de aprendizado. Sinta-se à vontade para contribuir com melhorias ou fazer sugestões para torná-lo ainda mais divertido.
+## Referência 
 
-Divirta-se jogando! 🎉
+Neste projeto, me inspirei em um tutorial detalhado no YouTube que ensina a criar uma lista de tarefas usando HTML, CSS e JavaScript. O vídeo tutorial, criado por [Felipe Rocha • dicasparadevs](https://youtu.be/0EiX9c4vzRs), oferece um passo-a-passo completo e explicativo sobre a implementação desse projeto.
+
+Esse jogo faz parte de um projeto de aprendizado. Sinta-se à vontade para contribuir com melhorias ou fazer sugestões para torná-lo ainda mais divertido.
+
+Divirta-se jogando! 😊
