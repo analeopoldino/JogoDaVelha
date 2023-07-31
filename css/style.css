@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none ;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(../imagens/15441859_5585189.jpg);
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-position: center;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    rgba(4, 2, 6, 0.859),
+    rgba(0, 0, 0, 0.907),
+    rgba(0, 0, 0, 0.892)
+  );
+  backdrop-filter: brightness(0.5);
+}
+
+.container h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 40px 0px 0px 0px;
+}
+
+.mode-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 150px 200px 0px 200px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.355);
+  height: 35%;
+  border-radius: 30px;
+}
+
+.mode-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 300px;
+  height: 80px;
+  background-color: #000000;
+  padding: 30px 20px;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  margin-right: 10px;
+  transition: 0.9s;
+}
+
+.mode-button:hover {
+  box-shadow: 10px 5px 56px -6px #202020;
+  color: #ffffff;
+}
+
+.mode-button:active {
+  transform: scale(0.97);
+  box-shadow: 7px 5px 56px -10px #555459;
+  opacity: 0.6;
+}
+
+.board {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+  margin-top: 100px;
+}
+
+.board.x .celula:not(.x):not(.circle):hover::after,
+.board.x .celula:not(.x):not(.circle):hover::before,
+.board.circle .celula:not(.x):not(.circle):hover::after,
+.board.circle .celula:not(.x):not(.circle):hover::before {
+  background: #ffffff71 !important;
+}
+
+.celula {
+  width: 200px;
+  height: 150px;
+  border: 5px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.celula.x,
+.celula.circle {
+  cursor: not-allowed;
+}
+
+.celula:nth-child(1),
+.celula:nth-child(2),
+.celula:nth-child(3) {
+  border-top: none;
+}
+
+.celula:nth-child(1),
+.celula:nth-child(4),
+.celula:nth-child(7) {
+  border-left: none;
+}
+
+.celula:nth-child(7),
+.celula:nth-child(8),
+.celula:nth-child(9) {
+  border-bottom: none;
+}
+
+.celula:nth-child(3),
+.celula:nth-child(6),
+.celula:nth-child(9) {
+  border-right: none;
+}
+
+/* X */
+.celula.x::before,
+.celula.x::after,
+.board.x .celula:not(.x):not(.circle):hover::after,
+.board.x .celula:not(.x):not(.circle):hover::before {
+  content: "";
+  height: calc(80px * 0.15);
+  width: calc(80px * 0.9);
+  background: #ffffff;
+  position: absolute;
+}
+
+.celula.x::before,
+.board.x .celula:not(.x):not(.circle):hover::before {
+  transform: rotate(45deg);
+}
+
+.celula.x::after,
+.board.x .celula:not(.x):not(.circle):hover::after {
+  transform: rotate(-45deg);
+}
+
+/* Circle */
+.celula.circle::before,
+.celula.circle::after,
+.board.circle .celula:not(.x):not(.circle):hover::after,
+.board.circle .celula:not(.x):not(.circle):hover::before {
+  content: "";
+  height: calc(70px * 0.9);
+  width: calc(70px * 0.9);
+  background: #ffffff;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.winning-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.916),
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0.892)
+  );
+  backdrop-filter: blur(0.9);
+  flex-direction: column;
+}
+
+.winning-message-text {
+  font-weight: 700;
+  font-size: 100px;
+  color: #ffffff;
+}
+
+.winning-message-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 300px;
+  height: 90px;
+  background: #ffffff;
+  padding: 30px 20px;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  color: #000000;
+  font-weight: 700;
+  margin-top: 20px;
+  transition: 0.9s;
+}
+
+.winning-message-button:hover {
+  box-shadow: 10px 5px 56px -6px #d9d7d759;
+}
+
+.winning-message-button:active {
+  transform: scale(0.97);
+  box-shadow: 7px 5px 56px -10px #848486;
+  opacity: 0.6;
+}
+
+.show-winning-message {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+/* Tamanho mínimo da tela para tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .container {
+    background: url(../imagens/15441859_5585189.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  .mode-container {
+    flex-direction: column;
+    height: auto;
+    margin: 150px 50px 0px 50px;
+    padding-top: 20px;
+  }
+
+  .mode-button {
+    margin-bottom: 20px;
+  }
+
+  .board {
+    margin-top: 200px;
+  }
+
+  .celula {
+    width: 150px;
+    height: 150px;
+  }
+
+  .winning-message {
+    padding: 30px;
+  }
+
+  .winning-message-text {
+    font-size: 3rem;
+  }
+
+  .winning-message-button {
+    width: 200px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+
+  .show-winning-message {
+    display: flex;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+/* Tamanho mínimo da tela para dispositivos móveis */
+@media screen and (max-width: 767px) {
+  .container {
+    background: url(../imagens/15441859_5585189.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  .container h1 {
+    font-size: 2.5rem;
+  }
+
+  .mode-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 150px 20px 0px 20px;
+  }
+
+  .board {
+    margin-top: 200px;
+  }
+
+  .mode-button {
+    font-size: 1rem;
+    width: 200px;
+    height: 60px;
+    margin-top: 20px;
+  }
+
+  .celula {
+    width: 100px;
+    height: 100px;
+  }
+
+  .winning-message-text {
+    font-size: 3rem;
+  }
+
+  .winning-message-button {
+    width: 160px;
+    height: 50px;
+    font-size: 0.9rem;
+  }
+
+  .show-winning-message {
+    display: flex;
+  }
+
+  .hide {
+    display: none;
+  }
+}
