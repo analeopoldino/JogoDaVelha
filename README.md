@@ -1,6 +1,6 @@
 # Jogo da Velha
 
-![JogodaVelha](/iamgens/tic-tac-toe.gif)
+![JogodaVelha](/imagens/tic-tac-toe.gif)
 
 Este é um simples jogo da velha desenvolvido em HTML, CSS e JavaScript. O jogo pode ser jogado por dois jogadores ou contra o computador.
 
