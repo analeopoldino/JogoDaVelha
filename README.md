@@ -5,31 +5,55 @@
 Este é um simples jogo da velha desenvolvido em HTML, CSS e JavaScript. O jogo pode ser jogado por dois jogadores ou contra o computador.
 
 
-## Como Jogar
+## Instalação/Como usar
 
-Link do site
+<p align="center">
+<a href="https://analeopoldino.github.io/JogoDaVelha/" align="center"><img src="https://i.imgur.com/abgYAhj.png" alt="cliqueAqui"></a>
+</p>
+<br>
+<br>
 
-<a href="https://analeopoldino.github.io/JogoDaVelha/">
-  <img src="imagens/jogo-da-velha.svg" alt="Site" width="90">
-</a>
+<p align="center"><i> Se preferir abra uma nova guia do seu navegador e copeie e cole o link abaixo.</i></p>
 
-## Como Funciona
+<p align="center">
 
-O jogo utiliza atributos `data-*` e classes CSS para selecionar os elementos relevantes do HTML e controlar o estado do jogo. As combinações vencedoras são verificadas a cada jogada para determinar se um jogador venceu a partida ou se houve empate. O modo de jogo é definido através de um atributo `data-mode` nos botões de seleção de modo.
+```
+LINK: https://analeopoldino.github.io/JogoDaVelha/
+```
+</p>
+<br>
 
-O jogo permite que o computador faça movimentos aleatórios quando o modo "Jogador vs Computador" é selecionado.
 
-## Responsividade
 
-O design do jogo é responsivo e se adapta a diferentes tamanhos de tela, incluindo tablets e dispositivos móveis. As células do tabuleiro são ajustadas para se encaixar em diferentes resoluções.
+## Funcionalidade 
+
+* O jogo possui dois modos, Jogador vs Jogador e Jogador vs Computador, e o usuário necessita escolher um para que ele libere o jogo 
+
+* O jogo permite que o computador faça movimentos aleatórios quando o modo "Jogador vs Computador" é selecionado.
+
+* O jogo permite que usuários joguem juntos de em formato local  quando o modo "Jogador vs Jogador" é selecionado.
+
+* O jogo termina quando um jogador faz uma sequência de 3 símbolos iguais (X ou Círculo) na horizontal, vertical ou diagonal. Ou então ocorre um empate.
+
+* Não é possível escolher o símbolo (X ou Círculo) para jogar. No modo Jogador vs Jogador, o X sempre começa e no modo Jogador vs Computador, o computador começa com o símbolo de círculo.
+
+
 ## Contribuições
 
 Contribuições são bem-vindas! Se você encontrar algum problema ou tiver alguma melhoria para sugerir, por favor, abra uma issue ou envie um pull request.
 
+
 ## Referência 
 
-Neste projeto, me inspirei em um tutorial detalhado no YouTube que ensina a criar uma lista de tarefas usando HTML, CSS e JavaScript. O vídeo tutorial, criado por [Felipe Rocha • dicasparadevs](https://youtu.be/0EiX9c4vzRs), oferece um passo-a-passo completo e explicativo sobre a implementação desse projeto.
+Referência
+
+Este projeto foi desenvolvido com base em um vídeo tutorial do canal "Felipe Rocha • dicasparadevs" no YouTube. O vídeo que utilizei como referência pode ser encontrado [aqui](https://youtu.be/0EiX9c4vzRs).
+
+Agradeço ao canal **Felipe Rocha • dicasparadevs** pela excelente explicação e orientação que me ajudaram a criar este Jogo da Velha.
 
 Esse jogo faz parte de um projeto de aprendizado. Sinta-se à vontade para contribuir com melhorias ou fazer sugestões para torná-lo ainda mais divertido.
+
+---
+Obrigado por visitar o site! Espero que ele possa servir como um guia útil para o desenvolvimento de projetos mais complexos no futuro.
 
 Divirta-se jogando! 😊
