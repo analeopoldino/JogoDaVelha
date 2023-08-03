@@ -218,5 +218,5 @@ function handleRestartButtonClick() {
 // Adiciona evento de clique ao botão de reiniciar o jogo
 $restartgeButton.addEventListener("click", handleRestartButtonClick);
 
-// Inicia o jogo no modo padrão (jogador vs jogador)
+// Inicia o jogo
 startGame();
