@@ -145,7 +145,6 @@ body {
   border-right: none;
 }
 
-/* X */
 .celula.x::before,
 .celula.x::after,
 .board.x .celula:not(.x):not(.circle):hover::after,
@@ -167,7 +166,6 @@ body {
   transform: rotate(-45deg);
 }
 
-/* Circle */
 .celula.circle::before,
 .celula.circle::after,
 .board.circle .celula:not(.x):not(.circle):hover::after,
@@ -240,7 +238,7 @@ body {
   display: none;
 }
 
-/* Tamanho mínimo da tela para tablets */
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
     .container {
@@ -295,7 +293,7 @@ body {
   }
 }
 
-/* Tamanho mínimo da tela para dispositivos móveis */
+
 @media screen and (max-width: 767px) {
   .container {
     background: url(../imagens/15441859_5585189.jpg);
